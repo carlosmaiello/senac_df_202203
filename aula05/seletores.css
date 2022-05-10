@@ -1,0 +1,16 @@
+/* Seletores básicos */
+body { color: brown; }
+#div2 { font-size: 20px; }
+.bg-verde { background-color: aquamarine; }
+.bg-azul { background-color: #0088ff; }
+.bg-vermelho { background-color: crimson; color: #ffffff; }
+.caixa { padding: 50px; }
+/* Combinando seletores em um mesmo elemento */
+.caixa.bg-azul { padding: 100px; }
+h1.bg-azul { padding: 10px; }
+div#div3 { font-size: 30px;}
+/* Selecionando elementos dentro de outro elemento */
+#div2 h1 { color: white; }
+body > h1 { text-shadow: -10px -10px 5px yellow;}
+
+p:hover { background-color: darkmagenta;}

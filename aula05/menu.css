@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+header { color: #fff; }
+header > nav { background-color: black; padding: 1px 0; }
+header .logo { margin: 0; }
+
+footer { background-color: #ddd; }
+main { border: 1px solid #ddd; }
+
+.menu a { color: #fff; padding: 5px 10px; display: block; border: 1px solid #fff; }
+.menu > ul > li > a:hover { background-color: darkmagenta;}
+.menu ul { list-style: none; padding: 0; margin: 0; }
+.menu > ul { display: flex; justify-content: stretch; }
+.menu > ul > li { flex: 1; }
+.menu > ul > li > ul { background-color: #777; }
+
+.menu > ul li:first-child { background-color: aquamarine; }
+
+

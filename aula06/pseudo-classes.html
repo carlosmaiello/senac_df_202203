@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        body { font-size: 30px; }
+        ul { display: flex; list-style: none; }
+        ul a { padding: 0 20px; display: block;}
+        ul li { 
+            border-top: 10px dashed black; 
+            border-bottom: 3px solid black; 
+        }
+        ul li:first-child { 
+            border-left: 3px solid black; 
+        }
+        ul li:last-child { 
+            border-right: 3px solid black; 
+        }
+
+        p::first-letter { font-size: 3em; }
+        p::first-line { background-color: bisque; }
+        p::selection { background-color: brown; }
+
+        a::before { content: '.::';}
+        a::after { content: '::.';}
+    </style>
+</head>
+<body id="pagina">
+
+    <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+        <li><a href="#">Item 5</a></li>
+    </ul>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, aliquid molestias! Inventore cupiditate, quasi
+        nemo, minima distinctio ducimus quisquam recusandae id eum ratione eius ullam ex, tempore nihil modi accusantium!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, aliquid molestias! Inventore cupiditate, quasi
+        nemo, minima distinctio ducimus quisquam recusandae id eum ratione eius ullam ex, tempore nihil modi accusantium!
+    </p>
+<!-- 
+    <script>
+        document.getElementById("pagina").onselect = function () {
+            alert("Selecionou");
+        }
+    </script>
+ -->
+    
+</body>
+</html>
