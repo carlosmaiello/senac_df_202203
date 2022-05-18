@@ -2,7 +2,7 @@ import PageTitle from "../components/PageTitle";
 import Form from "../components/Form";
 import Historico from "../components/Historico";
 
-export default function CalcPage() {
+export default function CalcPage({ titulo }) {
 
   let historico = [
     {
@@ -33,10 +33,15 @@ export default function CalcPage() {
 
   return (
     <div className="CalcPage">
-      <PageTitle title="Cálculo de IMC" />     
-
-      <Form peso="90" altura="1.81" />
-      <Historico itens={historico} />      
+      <PageTitle title={titulo} />
+      <div className="linha">
+        <div className="coluna">
+          <Form peso="90" altura="1.81" />
+        </div>
+        <div className="coluna">
+          <Historico itens={historico} />
+        </div>
+      </div>
     </div>
   );
 }
