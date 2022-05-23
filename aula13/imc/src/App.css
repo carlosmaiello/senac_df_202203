@@ -1,0 +1,14 @@
+.linha { display: flex; }
+
+.App { 
+    width: 600px; 
+    margin: 30px auto; 
+    padding: 20px;
+    background-color: #ccc;
+}
+
+label { width: 60px; display: inline-block;}
+button { width: 100%; }
+
+.Historico { font-size: 10px;}
+
