@@ -12,8 +12,11 @@ export default function Form(props) {
 
   const calcular = (e) => {
     e.preventDefault();
-    setIMC(peso / (altura * altura));
+    const res = peso / (altura * altura);
+    setIMC(res);
+    props.onCalcIMC(peso, altura, res);
   };
+  
 
   return (
     <>
