@@ -6,14 +6,19 @@ export default function Form(props) {
   const [peso, setPeso] = useState(props.peso);
   const [altura, setAltura] = useState(props.altura);
 
+  console.log(props);
+
   useEffect(() => {
     setIMC(0);
   }, [peso, altura]);
 
   const calcular = (e) => {
     e.preventDefault();
-    setIMC(peso / (altura * altura));
+    const res = peso / (altura * altura);
+    setIMC(res);
+    props.onCalcIMC(peso, altura, res);
   };
+  
 
   return (
     <>
