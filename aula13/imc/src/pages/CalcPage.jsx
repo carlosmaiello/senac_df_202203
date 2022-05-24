@@ -4,18 +4,33 @@ import Historico from "../components/Historico";
 import { useState } from "react";
 
 export default function CalcPage({ titulo }) {
-  const [historico, setHistorico] = useState([]);
+  const [historico, setHistorico] = useState(() => {
+    const saved = localStorage.getItem("historico");
+    try {
+      const initialValue = JSON.parse(saved);
+      return initialValue || [];
+    } catch (e) {
+      return [];
+    }
+  });
 
   const addHistorico = (peso, altura, imc) => {
-    setHistorico([
-      ...historico,
+    let h = [
       {
         altura: altura,
         peso: peso,
         imc: imc,
         mensagem: "-",
       },
-    ]);
+      ...historico,
+    ];
+    setHistorico(h);
+    window.localStorage.setItem("historico", JSON.stringify(h));
+  };
+
+  const limparHistorico = () => {
+    window.localStorage.removeItem("historico");
+    setHistorico([]);
   };
 
   return (
@@ -26,7 +41,7 @@ export default function CalcPage({ titulo }) {
           <Form peso="90" altura="1.81" onCalcIMC={addHistorico} />
         </div>
         <div className="coluna">
-          <Historico itens={historico} />
+          <Historico itens={historico} onClear={limparHistorico} />
         </div>
       </div>
     </div>

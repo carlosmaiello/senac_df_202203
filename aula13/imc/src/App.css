@@ -1,4 +1,5 @@
 .linha { display: flex; }
+.coluna { flex: 1; }
 
 .App { 
     width: 600px; 
@@ -10,5 +11,6 @@
 label { width: 60px; display: inline-block;}
 button { width: 100%; }
 
-.Historico { font-size: 10px;}
+.Historico { font-size: 10px;  }
+
 
