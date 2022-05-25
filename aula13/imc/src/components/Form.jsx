@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import Resultado from './Resultado';
+import { useEffect, useState } from "react";
+import Resultado from "./Resultado";
 
 export default function Form(props) {
   const [imc, setIMC] = useState(0);
@@ -16,18 +16,21 @@ export default function Form(props) {
     setIMC(res);
     props.onCalcIMC(peso, altura, res);
   };
-  
 
   return (
     <>
-      <form onSubmit={calcular}>
-        <div className="form-control">
-          <label htmlFor="altura">Altura</label>
-          <input type="text" id="altura" value={altura} onChange={(e) => setAltura(e.target.value)} />
+      <form onSubmit={calcular} className="p-3">
+        <div class="mb-3">
+          <label htmlFor="altura" class="form-label">
+            Altura
+          </label>
+          <input type="text" className="form-control" id="altura" value={altura} onChange={(e) => setAltura(e.target.value)} />
         </div>
-        <div className="form-control">
-          <label htmlFor="peso">Peso</label>
-          <input type="text" id="peso" value={peso} onChange={(e) => setPeso(e.target.value)} />
+        <div class="mb-3">
+          <label htmlFor="peso" class="form-label">
+            Peso
+          </label>
+          <input type="text" className="form-control" id="peso" value={peso} onChange={(e) => setPeso(e.target.value)} />
         </div>
         <div className="form-buttons">
           <button type="submit">Calcular</button>

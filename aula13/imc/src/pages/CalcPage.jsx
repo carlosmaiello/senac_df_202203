@@ -4,8 +4,9 @@ import Historico from "../components/Historico";
 import { useState } from "react";
 
 export default function CalcPage({ titulo }) {
+
   const [historico, setHistorico] = useState(() => {
-    const saved = localStorage.getItem("historico");
+    const saved = window.localStorage.getItem("historico");
     try {
       const initialValue = JSON.parse(saved);
       return initialValue || [];
@@ -35,14 +36,13 @@ export default function CalcPage({ titulo }) {
 
   return (
     <div className="CalcPage">
-      <PageTitle title={titulo} />
-      <div className="linha">
-        <div className="coluna">
-          <Form peso="90" altura="1.81" onCalcIMC={addHistorico} />
-        </div>
-        <div className="coluna">
-          <Historico itens={historico} onClear={limparHistorico} />
-        </div>
+      <div class="card mt-3 col-6 offset-3">
+        <div class="card-header">{titulo}</div>
+        <Form peso="90" altura="1.81" onCalcIMC={addHistorico} />
+      </div>
+
+      <div className="col-6 offset-3">
+        <Historico itens={historico} onClear={limparHistorico} />
       </div>
     </div>
   );
