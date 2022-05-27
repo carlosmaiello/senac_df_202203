@@ -1,35 +1,26 @@
-import { Form, Row, Col, FormGroup, Label, Input, Button } from "reactstrap";
+import { Button, Form } from "react-bootstrap";
 
 export default function ClienteForm() {
   return (
     <div className="ClienteForm">
       <h3>Novo Cliente</h3>
       <Form>
-        <Row>
-          <Col>
-            <FormGroup floating>
-              <Input id="nome" name="nome" />
-              <Label for="nome">Nome</Label>
-            </FormGroup>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <FormGroup floating>
-              <Input id="telefone" name="telefone" />
-              <Label for="telefone">Telefone</Label>
-            </FormGroup>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <FormGroup floating>
-              <Input id="email" name="email" type="email" />
-              <Label for="email">Email</Label>
-            </FormGroup>
-          </Col>
-        </Row>
-        <Button>Inserir</Button>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="Check me out" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
       </Form>
     </div>
   );

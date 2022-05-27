@@ -1,9 +1,7 @@
-import { Table } from "reactstrap";
-
 export default function ClienteTabela() {
   return (
     <div className="ClienteTabela">
-      <Table>
+      <table>
         <thead>
           <tr>
             <th>#</th>
@@ -32,7 +30,7 @@ export default function ClienteTabela() {
             <td>@twitter</td>
           </tr>
         </tbody>
-      </Table>
+      </table>
     </div>
   );
 }
