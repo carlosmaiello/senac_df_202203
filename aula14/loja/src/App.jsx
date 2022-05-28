@@ -1,11 +1,15 @@
-import Cliente from "./pages/clientes/Cliente";
-
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Col, Container, Row } from "react-bootstrap";
+import Header from "./components/Header";
 
 export default function App() {
   return (
     <div className="App">
-      <Cliente />
+      <Header />
+      <Container>
+        <Row>
+          <Col>Em desenvolvimento ...</Col>
+        </Row>
+      </Container>
     </div>
   );
 }
