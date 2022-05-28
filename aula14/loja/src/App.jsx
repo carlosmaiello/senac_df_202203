@@ -1,15 +1,9 @@
-import { Col, Container, Row } from "react-bootstrap";
-import Header from "./components/Header";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Admin from "./pages/admin/Admin";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
-    <div className="App">
-      <Header />
-      <Container>
-        <Row>
-          <Col>Em desenvolvimento ...</Col>
-        </Row>
-      </Container>
-    </div>
+   <div>App</div>
   );
 }
