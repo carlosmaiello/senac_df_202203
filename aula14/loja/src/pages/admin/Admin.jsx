@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
 import Menu from "../../components/Menu";
-import Cliente from "./clientes/Cliente";
 
 export default function Admin() {
     return (
@@ -10,7 +10,7 @@ export default function Admin() {
             <Menu />
           </Col>
           <Col>
-            <Cliente />
+            <Outlet />
           </Col>
         </Row>
       </Container>
