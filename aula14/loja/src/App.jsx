@@ -5,6 +5,7 @@ import Admin from "./pages/admin/Admin";
 import ClienteLista from "./pages/admin/clientes/ClienteLista";
 import ClienteForm from "./pages/admin/clientes/ClienteForm";
 import Home from "./pages/loja/Home";
+import Carrinho from "./pages/loja/Carrinho";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Loja />}>
           <Route path="produtos" element={<Produtos />} />
+          <Route path="carrinho" element={<Carrinho />} />
           <Route index element={<Home />} />
         </Route>
         <Route path="/admin" element={<Admin />}>

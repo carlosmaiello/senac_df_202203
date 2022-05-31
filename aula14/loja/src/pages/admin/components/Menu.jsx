@@ -12,7 +12,7 @@ export default function Menu() {
           <Accordion.Item eventKey="0">
             <Accordion.Header>Clientes</Accordion.Header>
             <Accordion.Body>
-              <Nav defaultActiveKey="/clientes" className="flex-column">
+              <Nav defaultActiveKey="/admin/clientes" className="flex-column">
                 <Nav.Link as={Link} to="/admin/clientes/novo">
                   Novo Cliente
                 </Nav.Link>

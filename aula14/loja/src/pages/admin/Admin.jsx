@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
-import Menu from "../../components/Menu";
+import Menu from "./components/Menu";
 
 export default function Admin() {
     return (
@@ -9,7 +9,7 @@ export default function Admin() {
           <Col md={3}>
             <Menu />
           </Col>
-          <Col>
+          <Col className="py-3">
             <Outlet />
           </Col>
         </Row>
