@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg" sticky="top">
+    <Navbar collapseOnSelect expand="lg" sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/">
           React-Bootstrap
