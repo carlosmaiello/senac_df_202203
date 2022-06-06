@@ -5,6 +5,7 @@ export const Context = React.createContext();
 export default function AdminClientContext({children}) {
     const [clients, setClients] = useState([]);
 
+    //CRUD
     const create = (client) => {
         const data = [
             ...clients,
@@ -20,6 +21,9 @@ export default function AdminClientContext({children}) {
     }
 
     const list = () => {
+        fetch("https://fakestoreapi.com/users")
+          .then((res) => res.json())
+          .then((json) => setClients(json));
     }
 
     return (
