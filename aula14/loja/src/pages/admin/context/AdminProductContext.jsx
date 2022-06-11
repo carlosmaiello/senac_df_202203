@@ -11,5 +11,10 @@ export default function AdminProductContext({ children }) {
       .then((json) => setProducts(json));
   };
 
-  return <Context.Provider value={{ products, list }}>{children}</Context.Provider>;
+  const get = async (id) => {
+    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+    return response.json();
+  }
+
+  return <Context.Provider value={{ products, list, get }}>{children}</Context.Provider>;
 }

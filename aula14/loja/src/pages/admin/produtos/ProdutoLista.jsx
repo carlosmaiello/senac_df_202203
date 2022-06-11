@@ -7,7 +7,7 @@ export default function ProdutoLista() {
   const { list, products } = useContext(Context);
 
   useEffect(() => {
-      list();
+    list();
   }, []);
 
   return (
@@ -29,9 +29,17 @@ export default function ProdutoLista() {
         <tbody>
           {products.map((product) => (
             <tr>
-              <td>{product.id}</td>
-              <td><img src={product.image} alt="Foto do produto" width={100}/></td>
-              <td>{product.title}</td>
+              <td>
+                <Link to={`/admin/produtos/${product.id}`}>{product.id}</Link>
+              </td>
+              <td>
+                <Link to={`/admin/produtos/${product.id}`}>
+                  <img src={product.image} alt="Foto do produto" width={100} />
+                </Link>
+              </td>
+              <td>
+                <Link to={`/admin/produtos/${product.id}`}>{product.title}</Link>
+              </td>
               <td>{product.price}</td>
               <td>{product.category}</td>
             </tr>
