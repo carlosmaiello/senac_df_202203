@@ -22,7 +22,7 @@ export default function ProdutoDetalhes() {
         <h2>{product.category}</h2>
         <p>Preço: {product.price}</p>
         <p>{product.description}</p>
-        <img src={product.image} alt="Foto do produto" />
+        <img src={product.image} style={{maxWidth: "100%"}} alt="Foto do produto" />
       </>
     );
 }
