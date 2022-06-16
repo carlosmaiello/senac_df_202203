@@ -4,7 +4,7 @@ import { Context } from "../../context/AdminClientContext";
 
 function ClientRow({client}) {
   return (
-    <tr>
+    <tr key={client.id}>
       <td>{client.id}</td>
       <td>{client.name.firstname} {client.name.lastname}</td>
       <td>{client.email}</td>

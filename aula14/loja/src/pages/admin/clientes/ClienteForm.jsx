@@ -28,11 +28,12 @@ export default function ClienteForm() {
         lastname,
       },
       address: {
+        city,
         street,
         number,
-        city,
-        zipcode
+        zipcode,
       },
+      phone,
     });
   }
   

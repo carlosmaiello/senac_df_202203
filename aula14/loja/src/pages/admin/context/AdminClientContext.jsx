@@ -12,6 +12,7 @@ export default function AdminClientContext({ children }) {
     fetch("https://fakestoreapi.com/users", {
       method: "POST",
       body: JSON.stringify(client),
+      mode: 'no-cors',
     })
       .then((res) => res.json())
       .then((json) => console.log(json));

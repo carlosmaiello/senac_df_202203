@@ -1,90 +1,19 @@
-import { Card, Col, Container, Row, Button } from "react-bootstrap";
+import { useContext } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { Context } from "./context/ProductContext";
+import ProductCard from "./components/ProductCard";
 
 export default function Home() {
+  const {products} = useContext(Context);
   return (
     <Container>
       <h2>Produtos</h2>
       <Row>
-        <Col md={4}>
-          <Card>
-            <Card.Img variant="top" src="https://holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Img variant="top" src="https://holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Img variant="top" src="https://holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Img variant="top" src="https://holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Img variant="top" src="https://holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Img variant="top" src="https://holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Img variant="top" src="https://holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Img variant="top" src="https://holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
+        {products.map((product) => (
+          <Col md={4} className="my-3 d-flex align-items-stretch">
+            <ProductCard product={product} description />
+          </Col>
+        ))}
       </Row>
     </Container>
   );

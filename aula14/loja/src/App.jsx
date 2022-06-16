@@ -8,7 +8,8 @@ import Home from "./pages/loja/Home";
 import Carrinho from "./pages/loja/Carrinho";
 import ProdutoLista from "./pages/admin/produtos/ProdutoLista";
 import ProdutoForm from "./pages/admin/produtos/ProdutoForm";
-import ProdutoDetalhes from "./pages/admin/produtos/ProdutoDetalhes";
+import AdminProdutoDetalhes from "./pages/admin/produtos/ProdutoDetalhes";
+import ProdutoDetalhes from "./pages/loja/ProdutoDetalhes";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Loja />}>
           <Route path="produtos" element={<Produtos />} />
+          <Route path="produtos/:id" element={<ProdutoDetalhes />} />
           <Route path="carrinho" element={<Carrinho />} />
           <Route index element={<Home />} />
         </Route>
@@ -25,7 +27,7 @@ export default function App() {
           <Route path="clientes/:id" element={<ClienteForm />} />
           <Route path="produtos" element={<ProdutoLista />} />
           <Route path="produtos/novo" element={<ProdutoForm />} />
-          <Route path="produtos/:id" element={<ProdutoDetalhes />} />
+          <Route path="produtos/:id" element={<AdminProdutoDetalhes />} />
         </Route>
         <Route
           path="*"

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <Navbar collapseOnSelect expand="lg" sticky="top">
+    <Navbar collapseOnSelect expand="lg" sticky="top" className="bg-light">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          React-Bootstrap
+          Fake Store
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
